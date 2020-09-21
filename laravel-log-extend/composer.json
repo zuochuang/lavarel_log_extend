@@ -1,0 +1,42 @@
+{
+    "name": "logextend/laravel-log-extend",
+    "description": "laravel logs",
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "5.6.*|5.7.*|5.8.*|^6.0|^7.0",
+        "monolog/monolog": "^1.23|^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "orchestra/testbench": "5.*.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "qyl",
+            "email": "qyl@tsing.cn"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "logextend\\LaravelLogExtend\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "logextend\\LaravelLogExtend\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "logextend\\LaravelLogExtend\\LaravelLogExtendServiceProvider"
+            ]
+        }
+    }
+}
